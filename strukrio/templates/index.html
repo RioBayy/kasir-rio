@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kasir</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <h1>Tambah Barang</h1>
+        <form action="/tambah" method="POST">
+            <label>Nama Barang</label>
+            <input type="text" name="nama" required>
+
+            <label>Harga</label>
+            <input type="number" step="0.01"  name="harga" required>
+
+            <button type="submit">Tambah</button>
+        </form>
+
+        <h2>Daftar Barang</h2>
+        <div class="card-container">
+            {% for item in items %}
+            <div class="card">
+                <strong>{{ item.nama }}</strong><br>
+                {{ item.harga|rupiah }}
+            </div>
+            {% endfor %}
+        </div>
+        <br>
+        <a href="/checkout"><button>Checkout</button></a>
+    </body>
+</html>

@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+form {
+    margin-bottom: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+input[type="text"], input[type="number"] {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #037589;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: all 0.2s ease;
+    font-weight: bold;
+}
+
+button, a button {
+    display: inline-block;
+    margin: 10px auto;
+}
+
+button:hover {
+    background-color: #06c0e1;
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 200px;
+}
+
+.receipt {
+    width: 300px;
+    background: white;
+    padding: 20px;
+    font-family: monospace;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.receipt h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.receipt ul {
+    list-style: none;
+    padding: 0;
+}
+
+.receipt li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #aaa;
+    padding: 5px 0;
+}
+
+.total {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10px;
+}
+
+@media print {
+    body * {
+        display: none;
+    }
+        
+    #struk, #struk *{
+        display: block;
+    }
+
+    #struk {
+        margin: 0 auto;
+        border: none;
+        width: 100%;
+    }
+}

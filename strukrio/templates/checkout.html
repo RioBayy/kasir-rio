@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Checkout</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class="receipt" id="struk">
+            <h2>STRUK BELANJA</h2>
+            <ul>
+                {% for item in items %}
+                <li><span>{{ item.nama }}</span><span>{{ item.harga|rupiah }}</span></li>
+                {% endfor %}
+            </ul>
+            <div class="total">Total: {{ total|rupiah }}</div>
+        </div>
+
+        <button onclick="window.print()">Unduh Struk</button>
+        <a href="/"><button>Kembali</button></a>
+    </body>
+</html>
